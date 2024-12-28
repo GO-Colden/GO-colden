@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agenda</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2e292dfb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+background: #2e292dfb;
+        }
+
+        .container {
+            width: 300px;
+            background-color: #2e292dfb;
+            border-radius: 23px;
+            box-shadow: 0 4px 8px rgba(6, 6, 6, 9.9);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #2e292dfb;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .header h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .form {
+            padding: 20px;
+            background-color: rgb(8, 7, 7) 255, 255, 0.624;
+        }
+
+        input[type="email"],
+    input[type="password"],
+    input[type="phone"] {
+        width: 93%; 
+        padding: 10px; 
+        margin: 10px 0; 
+        border: 1px solid #dbdbdb; 
+        border-radius: 49px; /* زوايا دائرية */
+        font-size: 14px; /* حجم الخط */
+    }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #fbff06; /* لون الزر */
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        padding: 10px; /* حشوة داخلية */
+        margin: 10px 0; /* مسافة بين الحقول */
+        border: 1px solid #dbdbdb; /* حدود خفيفة */
+        border-radius: 49px; /* زوايا دائرية */
+        font-size: 14px; /* حجم الخط */
+        }
+        button:hover {
+            background-color: #b3ff00; /* لون الزر عند التمرير */
+        }
+        a {
+        color:rgb(0, 255, 42); /* لون الرابط */
+        text-decoration: none; /* إزالة التسطير */
+    }
+    
+    a:hover {
+        text-decoration: underline; /* تسطير الرابط عند التمرير */
+    }
+   p{
+    color:#ffffff;
+   }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>GO-Colden</h1>
+        </div>
+        <div class="form">
+          <input type="email" placeholder="Useremail">
+                      <input type="password" placeholder="password">
+
+             <button onclick="goTowep()">Sign In </button>
+
+    <script>
+        function goTowep() {
+            window.location.href = "https://github.com/GO-Colden/GO-colden";
+        }
+    </script>
+            <center>
+
+            <p>No Accont?<a href="https://github.com/GO-Colden/GO-colden">Cilck Here</a></p>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
