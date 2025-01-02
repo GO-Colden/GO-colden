@@ -77,12 +77,31 @@
         }
         </style>
 <body>
-      <div class="login-container">
-        <h1>GO!</h1>
-        <input type="text" placeholder="Useremail">
-        <input type="password" placeholder="Password">
-        <button>Log In</button>
-        <a href="#">Forget password?</a>
+    <div class="login-container">
+      <h1>GO-Irport </h1>
+        
+        <input type="text" id="name" placeholder="your name" required>
+        <input type="text" id="email" placeholder="Useremail" required>
+         <input type="tel" id="phone" placeholder="Your phone" required>
+   
+         <button onclick="sendToWhatsApp()">next</button>
+
+    <script>
+        function sendToWhatsApp() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            
+            var message = `Name: ${name}\Email: ${email}\Phone ${phone}`;
+            var whatsappNumber = "201123961290"; // رقم الهاتف
+            var whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+         
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+
     </div> 
 </body>
 </html>
